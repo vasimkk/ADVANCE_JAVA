@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="models" class="com.dl.autowire.byname.Models" p:models="Honda City, Honda Civic" p:type="Automatic"></bean>
+	<bean name="honda" class="com.dl.autowire.byname.Honda" autowire="byName"></bean>
+	
+	<!-- <bean name="id2" class="com.dl.autowire.bytype.Models" p:models="Honda City, Honda Civic" p:type="Automatic"></bean>
+	<bean name="honda" class="com.dl.autowire.bytype.Honda" p:models-ref="hello"></bean> -->
+</beans>
