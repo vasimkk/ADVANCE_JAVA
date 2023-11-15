@@ -26,6 +26,19 @@ public class HondaDaoImpl implements HondaDao {
 		int insert = jdbcTemplate.update(sql, honda.getId(), honda.getBikeColor(), honda.getBikeName(), honda.getCc());
 		
 		return insert;
+		}
+       
+       public int updateRecord(Honda honda) {
+		
+		String sql = "update honda set bikeName=?, bikeColor=?, cc=? where id=?";
+		int update = jdbcTemplate.update(sql, honda.getBikeName(), honda.getBikeColor(), honda.getCc(), honda.getId());
+		return update;
 	}
-
+     
+       public int delete(int id) {
+   		String sql = "delete from honda where id=?";
+   		int deleteRecord = jdbcTemplate.update(sql, id);
+   		return deleteRecord;
+   	}
+	
 }

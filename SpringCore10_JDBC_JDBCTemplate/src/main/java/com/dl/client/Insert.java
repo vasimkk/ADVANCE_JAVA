@@ -12,7 +12,7 @@ public class Insert {
 		HondaDao dao = (HondaDao)context.getBean("hondaDao");
 		
 		Honda honda = new Honda();
-		honda.setId(3);
+		honda.setId(1);
 		honda.setBikeName("Honda CBR");
 		honda.setBikeColor("Black");
 		honda.setCc(1000.00);
@@ -21,7 +21,7 @@ public class Insert {
 		System.out.println("Record Saved in DB: " + insertRecord);
 		
 		Honda h2 = new Honda();
-		h2.setId(4);
+		h2.setId(2);
 		h2.setBikeName("hhh");
 		h2.setBikeColor("Black");
 		h2.setCc(200.00);
